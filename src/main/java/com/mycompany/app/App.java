@@ -24,12 +24,10 @@ public class App {
             ResultSet rset = stmt.executeQuery(strSelect);
 
             System.out.println("The records are:");
-            int rowCount = 0;
             while (rset.next()) {
-                String firstname = rset.getString("first_name");
+                String firstName = rset.getString("first_name");
                 String lastName = rset.getString("last_name");
-                System.out.println(firstname + ", " + lastName);
-                ++rowCount;
+                System.out.println(firstName + ", " + lastName);
             }
 
         } catch (Exception e) {
